@@ -1,6 +1,8 @@
 package main
 import "fmt"
 
+/*Dados tres valores ambientales de temperatura, desarrollar un algoritmo para calcular e informar la suma y el promedio de dichos valores.*/
+
 func main(){
 
 	acumulador,temp:=0,0

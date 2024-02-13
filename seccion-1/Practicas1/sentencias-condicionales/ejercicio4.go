@@ -5,6 +5,8 @@ import (
 	"strings"
 )
 
+/*Realice un algoritmo que dado un número te diga si es capicua y si es un string que te diga si es palindromo*/
+
 func main() {
 
 	var palabra string

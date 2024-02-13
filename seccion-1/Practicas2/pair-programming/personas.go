@@ -34,13 +34,13 @@ func main() {
 				menuBusqueda()
 				fmt.Scanln(&option2)
 				aux = buscarPersona(option2, personas)
-				if(aux!=nil){
+				if aux != nil {
 					fmt.Println("Esta es la/las personas que coinciden con su busqueda")
 					mostrarPersonas(aux)
-				}else{
+				} else {
 					fmt.Print("\nNo encontramos coincidencias con su busqueda")
 				}
-				
+
 				break
 			case 2:
 				mostrarPersonas(personas)
@@ -92,7 +92,7 @@ func cargarPersonas(personas []Persona) []Persona {
 	var alturaPeso float32
 	edad := 0
 
-	for i := 0; i < 1; i++ {
+	for i := 0; i < 5; i++ {
 		fmt.Print("\nNombre: ")
 		fmt.Scanln(&personita.nombre)
 		for {
@@ -130,7 +130,7 @@ func cargarPersonas(personas []Persona) []Persona {
 				fmt.Println("Dato invalido, por favor pruebe nuevamente")
 			}
 		}
-        fmt.Println("---------------------")
+		fmt.Println("---------------------")
 		personas = append(personas, personita)
 	}
 	return personas
@@ -148,7 +148,7 @@ func mostrarPersona(auxiliar Persona) {
 
 	categoria, imc := indiceMasaCorporal(auxiliar.peso, auxiliar.altura)
 	fmt.Println("-----------")
-	fmt.Println("Nombre: ", auxiliar.nombre)
+	fmt.Println("Nombre:  ", auxiliar.nombre)
 	fmt.Println("Edad: ", auxiliar.edad)
 	fmt.Println("Peso: ", auxiliar.peso)
 	fmt.Println("Altura: ", auxiliar.altura)
@@ -233,7 +233,7 @@ func buscarPersona(opcion int, persona []Persona) []Persona {
 	Que comparten el dato ingresado*/
 
 	//*****variables auxiliares*****//
-	flagsito:=true
+	flagsito := true
 	var auxiliar []Persona
 	var nombre string
 	var edad int
@@ -297,8 +297,8 @@ func buscarPersonaNombre(nombre string, persona []Persona) []Persona {
 
 	///En caso de mismo nombre cargamos el arreglo auxiliar con la persona que coincida
 	for i := 0; i < len(persona); i++ {
-		if strings.EqualFold(persona[i].nombre,nombre) {
-			auxiliar=append(auxiliar, persona[i])
+		if strings.EqualFold(persona[i].nombre, nombre) {
+			auxiliar = append(auxiliar, persona[i])
 		}
 	}
 	///Lo devolvemos
@@ -310,7 +310,7 @@ func buscarPersonaPeso(peso float32, persona []Persona) []Persona {
 	var auxiliar []Persona
 	for i := 0; i < len(persona); i++ {
 		if persona[i].peso == peso {
-			auxiliar=append(auxiliar, persona[i])
+			auxiliar = append(auxiliar, persona[i])
 		}
 	}
 
@@ -322,7 +322,7 @@ func buscarPersonaAltura(altura float32, persona []Persona) []Persona {
 
 	for i := 0; i < len(persona); i++ {
 		if persona[i].altura == altura {
-			auxiliar=append(auxiliar, persona[i])
+			auxiliar = append(auxiliar, persona[i])
 		}
 	}
 
@@ -334,7 +334,7 @@ func buscarPersonaEdad(edad int, persona []Persona) []Persona {
 	var auxiliar []Persona
 	for i := 0; i < len(persona); i++ {
 		if persona[i].edad == edad {
-			auxiliar=append(auxiliar, persona[i])
+			auxiliar = append(auxiliar, persona[i])
 		}
 	}
 

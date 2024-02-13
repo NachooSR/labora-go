@@ -1,6 +1,9 @@
 package main
 import "fmt"
 
+
+/*Realizar un algoritmo para leer un número e informar si es mayor, igual o menos a cero.*/
+
 func main(){
 	var numero int
 	fmt.Printf("Ingrese un numero: ")

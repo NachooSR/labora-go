@@ -1,6 +1,8 @@
 package main 
 import "fmt"
 
+/*Escribir un algoritmo que determine si un número es par.*/
+
 func main(){
 	var numero int
 	fmt.Printf("Ingrese un numero: ")
