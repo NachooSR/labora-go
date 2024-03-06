@@ -11,18 +11,10 @@ type intSequence interface {
 	HolaSoy()
 }
 
-type creciente struct {
-	numeroActual int
-}
+
 
 type primos struct {
 	numeroActual int
-}
-
-func (c *creciente) Next() int {
-	var siguiente = c.numeroActual
-	c.numeroActual++
-	return siguiente
 }
 
 func (p *primos) Next() int {
@@ -37,6 +29,18 @@ func (p *primos) Next() int {
 	p.numeroActual = siguiente
 	return siguiente
 }
+
+type creciente struct {
+	numeroActual int
+}
+
+func (c *creciente) Next() int {
+	var siguiente = c.numeroActual
+	c.numeroActual++
+	return siguiente
+}
+
+
 
 func isPrimo(numero int) bool {
 	if numero <= 1 {

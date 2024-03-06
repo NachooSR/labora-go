@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 	"strings"
-	"text/scanner"
+	
 )
 
 func main(){
