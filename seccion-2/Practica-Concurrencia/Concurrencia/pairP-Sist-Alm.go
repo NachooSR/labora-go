@@ -5,6 +5,8 @@ import (
 
 	"math"
 	"math/rand"
+
+	"golang.org/x/tools/go/analysis/passes/nilfunc"
 )
 
 type Audio struct {
